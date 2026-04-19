@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-public class shadermovement : MonoBehaviour
+public class shaderacts : MonoBehaviour
 {
     private float moveSpeed = 7.5f;
     private Rigidbody2D rb; 
