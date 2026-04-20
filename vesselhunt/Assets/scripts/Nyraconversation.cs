@@ -7,7 +7,7 @@ public class Nyraconversation : MonoBehaviour
     public Transform Nyra;
     private bool hasPlayed = false;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !hasPlayed)
         {

@@ -30,6 +30,7 @@ public class combat : MonoBehaviour
 
     private int currentGoon = 0;
     private bool combatMessageShown = false;
+    private bool combatStarted = false;
 
     private bool goon1active = false;
     private bool goon2active = false;
@@ -40,26 +41,27 @@ public class combat : MonoBehaviour
     {
         shadery = Shader.position.y;
         shaderx = Shader.position.x;
-        goon1x = goon1.transform.position.x;
-        goon1y = goon1.transform.position.y;
-        Nyray = Nyra.transform.position.y;
-
-        if (Nyray == -13.0f)
-        {
-            currentGoon = 1;
-            goon1active = true;
-            goon1.GetComponent<SpriteRenderer>().color = Color.black;
-            Debug.Log("Travel rightwards to the goons and defeat them. Stay in your range to attack. Your range is 8 in x dimension and 8 in y dimension.");
-        }
     }
 
     void Update()
     {
+        Nyray = Nyra.transform.position.y;
+
+        if (!combatStarted && Nyray <= -13.0f)
+        {
+            combatStarted = true;
+            currentGoon = 1;
+            goon1active = true;
+            goon1x = goon1.transform.position.x;
+            goon1y = goon1.transform.position.y;
+            goon1.GetComponent<SpriteRenderer>().color = Color.black;
+            Debug.Log("Travel rightwards to the goons and defeat them. Stay in your range to attack. Your range is 8 in x dimension and 8 in y dimension.");
+        }
+
         if (currentGoon == 0) return;
 
         shadery = Shader.position.y;
         shaderx = Shader.position.x;
-
 
         if (currentGoon == 1)
         {
