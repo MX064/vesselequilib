@@ -872,6 +872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388504664}
   - component: {fileID: 388504663}
+  - component: {fileID: 388504665}
   - component: {fileID: 388504662}
   - component: {fileID: 388504661}
   m_Layer: 0
@@ -1028,6 +1029,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388504665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388504660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cadc9495d2f0147a61c960c4fc50c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nyraconversation
+  Shader: {fileID: 1440568493}
+  Nyra: {fileID: 388504664}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
